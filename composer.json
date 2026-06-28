@@ -1,0 +1,53 @@
+{
+    "name": "mca/address",
+    "description": "Country, city, district and neighborhood data with admin CRUD and cascading API for Laravel.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "mca", "address", "turkey", "location"],
+    "require": {
+        "php": "^8.3",
+        "laravel/framework": "^13.0"
+    },
+    "suggest": {
+        "mca/permission": "Root access middleware for address admin UI",
+        "mca/hub": "MCA package hub integration",
+        "mca/settings": "Contact location select integration"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mca\\Address\\": "src/",
+            "Mca\\Address\\Database\\Seeders\\": "database/seeders/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mca\\Address\\AddressServiceProvider"
+            ]
+        },
+        "mca": {
+            "slug": "address",
+            "title": {
+                "en": "Address",
+                "tr": "Adres"
+            },
+            "description": {
+                "en": "Countries, cities, districts, neighborhoods with CRUD and API.",
+                "tr": "Ülke, şehir, ilçe, mahalle CRUD ve API."
+            },
+            "route": "mca.address.countries.index",
+            "github": "https://github.com/MCA43/mca-address",
+            "icon": "map-pin",
+            "order": 40,
+            "frameworks": ["laravel13"]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

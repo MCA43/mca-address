@@ -14,11 +14,10 @@ class ImportTurkeyCommand extends Command
 {
     protected $signature = 'mca:address:import-turkey
                             {--fresh : Mevcut mahalleleri sil ve yeniden yükle}
-                            {--source= : Yerel neighbourhoods.json dosya yolu}
-                            {--force-download : Uzak veriyi yeniden indir}
+                            {--source= : Alternatif JSON dosya yolu}
                             {--chunk=500 : Toplu ekleme boyutu}';
 
-    protected $description = 'Türkiye mahalle verisini turkey-neighbourhoods kaynağından içe aktarır';
+    protected $description = 'Türkiye mahalle verisini paket içi JSON dosyasından içe aktarır';
 
     public function __construct(
         private readonly TurkeyNeighborhoodImporter $importer,
@@ -41,7 +40,6 @@ class ImportTurkeyCommand extends Command
         try {
             $path = $this->importer->resolveDataPath(
                 $this->option('source') ?: null,
-                (bool) $this->option('force-download'),
             );
         } catch (\Throwable $exception) {
             $this->components->error($exception->getMessage());

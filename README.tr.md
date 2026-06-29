@@ -10,7 +10,7 @@ Laravel için ülke, şehir, ilçe ve mahalle: normalize tablolar, yönetim CRUD
 - **Yönetim CRUD** — `/mca/address` sekme navigasyonu
 - **Cascading API** — `mca/settings` iletişim select'leri ve formlar
 - **UAVT hazır** — `uavt_code` kolonları + ayarlar sayfası (sürücü v1.1)
-- **Türkiye seed** — 81 il + ~970 ilçe (gömülü veri)
+- **Türkiye seed** — 81 il + ~970 ilçe + gömülü mahalle JSON (posta kodu dahil)
 - **Hub entegrasyonu** — `/mca` panelinde Adres kartı
 
 ## Kurulum
@@ -30,13 +30,13 @@ GET /mca/address/api/neighborhoods?district_id=
 
 ## Tam Türkiye verisi
 
-Mahalleler (posta kodu dahil) [turkey-neighbourhoods](https://github.com/muratgozel/turkey-neighbourhoods) kaynağından içe aktarılır:
+Mahalleler paket içindeki `database/data/turkey-neighbourhoods.json` dosyasından yüklenir (posta kodu dahil, harici paket gerekmez):
 
 ```bash
 php artisan mca:address:import-turkey --fresh
 ```
 
-İlk çalıştırmada JSON indirilir ve `storage/app/mca-address/neighbourhoods.json` önbelleğe alınır.
+Önce il/ilçe seed’inin yüklü olması gerekir (`mca:address:install`).
 
 ## Lisans
 

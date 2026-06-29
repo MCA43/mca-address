@@ -49,11 +49,7 @@ return [
 
     'import' => [
         'turkey' => [
-            'neighbourhoods_url' => env(
-                'MCA_ADDRESS_IMPORT_NEIGHBOURHOODS_URL',
-                'https://raw.githubusercontent.com/muratgozel/turkey-neighbourhoods/master/src/data/neighbourhoods.json',
-            ),
-            'cache_path' => env('MCA_ADDRESS_IMPORT_CACHE', 'mca-address/neighbourhoods.json'),
+            'neighbourhoods_file' => env('MCA_ADDRESS_NEIGHBOURHOODS_FILE'),
         ],
     ],
 

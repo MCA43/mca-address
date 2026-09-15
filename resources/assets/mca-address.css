@@ -139,6 +139,13 @@
     border-top: 1px solid var(--mca-ui-border, #e2e8f0);
 }
 
+.mca-addr-pagination svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    max-width: 1.25rem;
+    max-height: 1.25rem;
+}
+
 .mca-addr-pagination__btn {
     display: inline-flex;
     align-items: center;

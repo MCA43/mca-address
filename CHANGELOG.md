@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.2] - 2026-09-28
+
+### Changed
+- Bundle Turkey neighborhoods as `turkey-neighbourhoods.json.gz` (~0.55 MB) instead of plain JSON (~8 MB)
+- Importer accepts `.json` and `.json.gz` (env override path still supported)
+
 ## [0.1.1] - 2026-06-28
 
 ### Changed

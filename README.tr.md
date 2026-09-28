@@ -30,7 +30,7 @@ GET /mca/address/api/neighborhoods?district_id=
 
 ## Tam Türkiye verisi
 
-Mahalleler paket içindeki `database/data/turkey-neighbourhoods.json` dosyasından yüklenir (posta kodu dahil, harici paket gerekmez):
+Mahalleler paket içindeki `database/data/turkey-neighbourhoods.json.gz` dosyasından yüklenir (posta kodu dahil, harici paket gerekmez; düz `.json` de kabul edilir):
 
 ```bash
 php artisan mca:address:import-turkey --fresh

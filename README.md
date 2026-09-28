@@ -32,7 +32,7 @@ Response: `{ "data": [{ "id": 1, "name": "Bursa" }] }`
 
 ## Full Turkey data
 
-Neighborhoods are loaded from the bundled `database/data/turkey-neighbourhoods.json` file (postal codes included, no external package required):
+Neighborhoods are loaded from the bundled `database/data/turkey-neighbourhoods.json.gz` file (postal codes included, no external package required; plain `.json` still accepted):
 
 ```bash
 php artisan mca:address:import-turkey --fresh

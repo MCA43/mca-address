@@ -17,6 +17,11 @@ final class AddressDataPaths
             return $configured;
         }
 
+        $gz = self::packageRoot().'/database/data/turkey-neighbourhoods.json.gz';
+        if (is_file($gz)) {
+            return $gz;
+        }
+
         return self::packageRoot().'/database/data/turkey-neighbourhoods.json';
     }
 }

@@ -1,4 +1,4 @@
-@extends('mca-address::layouts.app')
+@extends(\Mca\Address\Support\McaAddressView::layout())
 
 @section('title', mca_addr('cities.title').' — '.($mcaAddrTitle ?? mca_addr('app.title')))
 
